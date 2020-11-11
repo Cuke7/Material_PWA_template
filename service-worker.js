@@ -1,8 +1,8 @@
 "use strict";
 
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v3";
-const DATA_CACHE_NAME = "data-cache-v3";
+const CACHE_NAME = "static-cache-v4";
+const DATA_CACHE_NAME = "data-cache-v4";
 
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
@@ -11,7 +11,8 @@ const FILES_TO_CACHE = [
     "/styles/my-theme.css",
     "/styles/style.css",
     "/scripts/app.js",
-    "scripts/install.js",
+    "/scripts/material-components-web.min.js",
+    "/scripts/install.js",
     "/icons/favicon.ico",
     "/icons/maskable_icon.png"
 ];
@@ -48,7 +49,7 @@ self.addEventListener("activate", (evt) => {
 
 self.addEventListener("fetch", (evt) => {
     console.log("[ServiceWorker] Fetch", evt.request.url);
-    if (evt.request.url.includes("/request_data_to_server")) {
+    if (evt.request.url.includes("/reqres.in/api/products/3")) {
         //console.log("[Service Worker] Fetch (data)", evt.request.url);
         evt.respondWith(
             caches.open(DATA_CACHE_NAME).then((cache) => {

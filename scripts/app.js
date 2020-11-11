@@ -1,6 +1,8 @@
 
 init();
 
+let DataDiv = document.getElementById("DataDiv");
+
 function init() {
     if ("serviceWorker" in navigator) {
         console.log("Service Worker is supported");
@@ -17,7 +19,7 @@ function init() {
         console.warn("Service worker is not supported");
     }
 
-    //updateData();
+    updateData();
 }
 
 
@@ -25,15 +27,17 @@ function updateData() {
     // Get data from cache
     getDataFromCache().then((data) => {
         console.log("Displaying data info from cache", data);
+        DataDiv.innerHTML = data.data.name;
     });
     // Get data from network
     getDataFromNetwork().then((data) => {
         console.log("Displaying data info from API", data);
+        DataDiv.innerHTML = data.data.name;
     });
 }
 
 function getDataFromNetwork() {
-    return fetch(`https://mytrambot-bordeaux.herokuapp.com/get_evangile/`)
+    return fetch(`https://reqres.in/api/products/3`)
         .then((response) => {
             return response.json();
         })
@@ -46,7 +50,7 @@ function getDataFromCache() {
     if (!("caches" in window)) {
         return null;
     }
-    const url = `https://mytrambot-bordeaux.herokuapp.com/get_evangile/`;
+    const url = `https://reqres.in/api/products/3`;
     return caches
         .match(url)
         .then((response) => {
