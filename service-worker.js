@@ -1,13 +1,19 @@
 "use strict";
 
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v1";
-const DATA_CACHE_NAME = "data-cache-v1";
+const CACHE_NAME = "static-cache-v2";
+const DATA_CACHE_NAME = "data-cache-v2";
 
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
-    //"/",
-    //"/index.html"
+    "/",
+    "/index.html",
+    "/styles/my-theme.css",
+    "/styles/style.css",
+    "/scripts/app.js",
+    "scripts/install.js",
+    "/isons/favicon.ico",
+    "icons/maskable_icon.png"
 ];
 
 self.addEventListener("install", (evt) => {

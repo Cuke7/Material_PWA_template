@@ -1,7 +1,7 @@
 "use strict";
 
 let deferredInstallPrompt = null;
-const installButton = document.getElementById("butInstall");
+const installButton = document.getElementById("InstallButton");
 installButton.addEventListener("click", installPWA);
 
 // CODELAB: Add event listener for beforeinstallprompt event

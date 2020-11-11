@@ -62,7 +62,7 @@ function getDataFromCache() {
 }
 
 // Configure share button
-/*
+
 document.getElementById('ShareButton').addEventListener("click", function () {
     if (navigator.share) {
         navigator
@@ -75,7 +75,7 @@ document.getElementById('ShareButton').addEventListener("click", function () {
             .catch((error) => console.log("Error sharing", error));
     }
 });
-*/
+
 
 // Material components
 const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
