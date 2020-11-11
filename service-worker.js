@@ -11,7 +11,6 @@ const FILES_TO_CACHE = [
     "/styles/my-theme.css",
     "/styles/style.css",
     "/scripts/app.js",
-    "/scripts/material-components-web.min.js",
     "/scripts/install.js",
     "/icons/favicon.ico",
     "/icons/maskable_icon.png"
