@@ -24,8 +24,45 @@
   <link rel="stylesheet" href="./styles/style.css" />
 </head>
 
-<body>
-<h1>Hello world!</h1>
+<body class="mdc-typography">
+  <!--DRAWER-->
+  <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+          <span class="mdc-list-item__text">Option 1</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+          <span class="mdc-list-item__text">Second option</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+          <span class="mdc-list-item__text">Another option!</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+  <div class="mdc-drawer-scrim"></div>
+  <!--TOP APP BAR-->
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+          aria-label="Open navigation menu" onclick="drawer.open = true;">
+          menu
+        </button>
+        <span class="mdc-top-app-bar__title">My page title</span>
+      </section>
+    </div>
+  </header>
+  <div class="main-content">
+    <zero-md id="md" manual-render src="readme.md"> </zero-md>
+  </div>
 </body>
 
 <!-- Import Material scripts -->

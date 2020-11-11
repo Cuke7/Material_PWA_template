@@ -1,15 +1,22 @@
 {
-    "name": "My PWA title",
-    "short_name": "my PWA short title",
-    "icons": [{
+  "name": "My PWA title",
+  "short_name": "my PWA short title",
+  "icons": [
+    {
       "src": "icons/maskable_icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
-    }],
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "#2F3BA2",
-    "theme_color": "#2F3BA2"
-  }
-  
+    },
+    {
+      "src": "icons/maskable_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#2F3BA2",
+  "theme_color": "#2F3BA2"
+}
